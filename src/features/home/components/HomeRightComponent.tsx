@@ -2,7 +2,6 @@ import React from "react";
 import { Mobile } from "./Mobile";
 
 const HomeRightComponent: React.FC = () => {
-  
   return (
     <div>
       <Mobile />

@@ -3,7 +3,7 @@ import { homeReducer } from "../features/home/slice";
 
 const store = configureStore({
   reducer: {
-    home: homeReducer
+    home: homeReducer,
   },
 });
 
@@ -12,4 +12,3 @@ type AppDispatch = typeof store.dispatch;
 
 export { store };
 export type { AppDispatch, RootState };
-
