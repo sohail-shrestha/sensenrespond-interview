@@ -6,10 +6,10 @@ const Home: React.FC = () => {
   return (
     <Grid container>
       <Grid item xs={6}>
-            <HomeLeftComponent />
+        <HomeLeftComponent />
       </Grid>
       <Grid item xs={6}>
-            <HomeRightComponent />
+        <HomeRightComponent />
       </Grid>
     </Grid>
   );

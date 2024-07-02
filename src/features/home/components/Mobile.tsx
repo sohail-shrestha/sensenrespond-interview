@@ -3,14 +3,10 @@ import { EmailBox } from "../../../components";
 import { RootState } from "../../../store/store";
 
 const Mobile: React.FC = () => {
-  const a = useSelector((state: RootState) => 
-      state.home.subjectA
-  )
+  const a = useSelector((state: RootState) => state.home.subjectA);
 
-  const b = useSelector((state: RootState) => 
-    state.home.subjectB
-)
-  
+  const b = useSelector((state: RootState) => state.home.subjectB);
+
   return (
     <div>
       <EmailBox title={"The green yoga"} time={"5:45 PM"} content={a} />
