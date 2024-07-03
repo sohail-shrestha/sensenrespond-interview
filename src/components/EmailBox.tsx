@@ -8,6 +8,7 @@ type EmailBoxProps = {
   time: string;
   content: string;
   body?: string;
+  color?: "blue" | "purple";
 };
 
 const EmailBox: React.FC<EmailBoxProps> = ({
@@ -16,6 +17,7 @@ const EmailBox: React.FC<EmailBoxProps> = ({
   time,
   content,
   body,
+  color = "blue",
 }) => {
   return (
     <>
@@ -29,7 +31,7 @@ const EmailBox: React.FC<EmailBoxProps> = ({
         <Grid
           marginTop="4px"
           style={{
-            backgroundColor: "#4e76ed",
+            backgroundColor: color === "blue" ? "#4e76ed" : "#8256c6",
             width: "30px",
             height: "30px",
             padding: "8px",
@@ -40,7 +42,11 @@ const EmailBox: React.FC<EmailBoxProps> = ({
             borderRadius: "40px",
           }}
         >
-          {left ? left : <PersonOutlineOutlinedIcon fontSize="small" />}
+          {left ? (
+            <Typography>{left}</Typography>
+          ) : (
+            <PersonOutlineOutlinedIcon fontSize="small" />
+          )}
         </Grid>
         <Grid width="80%" marginLeft="16px">
           <Grid
@@ -50,15 +56,24 @@ const EmailBox: React.FC<EmailBoxProps> = ({
             width="100%"
             justifyContent="space-between"
           >
-            <Typography variant="h6">{title}</Typography>
-            <Typography variant="h6">{time}</Typography>
+            <Typography variant="h6" fontWeight="bold">
+              {title}
+            </Typography>
+            <Typography variant="h6" fontWeight="bold">
+              {time}
+            </Typography>
           </Grid>
           <Grid style={{ overflow: "clip", textOverflow: "ellipsis" }}>
-            <Typography variant="h6" height={70} width="100%">
+            <Typography
+              variant="h6"
+              height={70}
+              width="100%"
+              textOverflow="ellipsis"
+            >
               {content}
             </Typography>
           </Grid>
-          <Typography variant="body2">{body}</Typography>
+          <Typography variant="h6">{body}</Typography>
         </Grid>
       </Grid>
     </>

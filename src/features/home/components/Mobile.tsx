@@ -20,6 +20,7 @@ const Mobile: React.FC = () => {
         time={"5:45 PM"}
         content={b}
         left="B"
+        color="purple"
       />
       <EmailBox
         title={"Brevo Academy"}
@@ -32,6 +33,7 @@ const Mobile: React.FC = () => {
         time={"Spetember 6"}
         content={"Try the new drag and drop editor"}
         body="Learn how to save time % build beautiful email in a flash"
+        color="purple"
       />
     </Grid>
   );

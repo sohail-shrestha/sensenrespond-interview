@@ -26,7 +26,6 @@ const Home: React.FC = () => {
             marginRight="8px"
             paddingBottom="4px"
             spacing="32"
-            
           >
             <Grid item width="50%">
               <HomeLeftComponent />
