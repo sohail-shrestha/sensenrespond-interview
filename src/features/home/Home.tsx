@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       style={{ backgroundColor: "#fefefc" }}
     >
       <Card>
-        <CardContent >
+        <CardContent>
           <Grid
             container
             display="flex"
@@ -22,15 +22,15 @@ const Home: React.FC = () => {
             maxHeight="100%"
             marginTop="2%"
             marginBottom="2%"
-            marginLeft="4%"
-            marginRight="4%"
+            marginLeft="8px"
+            marginRight="8px"
             paddingBottom="4px"
-            spacing='32'
+            spacing="32"
           >
-            <Grid item width='50%'>
+            <Grid item width="50%">
               <HomeLeftComponent />
             </Grid>
-            <Grid item width='50%'>
+            <Grid item width="50%">
               <HomeRightComponent />
             </Grid>
           </Grid>
