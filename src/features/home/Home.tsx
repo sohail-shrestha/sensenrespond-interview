@@ -18,7 +18,7 @@ const Home: React.FC = () => {
             container
             display="flex"
             flexDirection="row"
-            maxWidth="100%"
+            maxWidth="70vw"
             maxHeight="100%"
             marginTop="2%"
             marginBottom="2%"
@@ -26,6 +26,7 @@ const Home: React.FC = () => {
             marginRight="8px"
             paddingBottom="4px"
             spacing="32"
+            
           >
             <Grid item width="50%">
               <HomeLeftComponent />
