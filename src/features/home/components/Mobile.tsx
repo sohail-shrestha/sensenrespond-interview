@@ -1,3 +1,4 @@
+import { Grid } from "@mui/material";
 import { useSelector } from "react-redux";
 import { EmailBox } from "../../../components";
 import { RootState } from "../../../store/store";
@@ -7,9 +8,9 @@ const Mobile: React.FC = () => {
   const b = useSelector((state: RootState) => state.home.subjectB);
 
   return (
-    <div>
-      <EmailBox title={"The green yoga"} time={"5:45 PM"} content={a} />
-      <EmailBox title={"The Green Yaga"} time={"5:45 PM"} content={b} />
+    <Grid width='100%'>
+      <EmailBox title={"The green yoga"} time={"5:45 PM"} content={a} left='A' />
+      <EmailBox title={"The Green Yaga"} time={"5:45 PM"} content={b} left='B' />
       <EmailBox
         title={"Brevo Academy"}
         time={"Spetember 6"}
@@ -22,7 +23,7 @@ const Mobile: React.FC = () => {
         content={"Try the new drag and drop editor"}
         body="Learn how to save time % build beautiful email in a flash"
       />
-    </div>
+    </Grid>
   );
 };
 

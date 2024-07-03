@@ -6,21 +6,25 @@ const HomeRightComponent: React.FC = () => {
   return (
     <Grid container>
       <Mobile />
-
-      <Grid item width="100%" marginTop='16px'>
+      <Grid item marginTop='16px' width='90%'>
         <Typography variant="body1">
           Actual email previewmay vary depending on the email client
         </Typography>
 
         <Grid
           container
-          justifyContent='flex-end'
+          justifyContent="flex-end"
           flexDirection="row"
           display="flex"
-          marginTop='4px'
+          marginTop="4px"
+          width='100%'
         >
-          <Button variant="text" style={{marginRight: '4px'}}>Cancel</Button>
-          <Button variant="contained" style={{borderRadius: '20px'}}>Save</Button>
+          <Button variant="text" style={{ marginRight: "4px" }}>
+            Cancel
+          </Button>
+          <Button variant="contained" style={{ borderRadius: "20px" }}>
+            Save
+          </Button>
         </Grid>
       </Grid>
     </Grid>
