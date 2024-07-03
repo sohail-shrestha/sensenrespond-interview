@@ -12,7 +12,7 @@ const HomeLeftComponent: React.FC = () => {
     <>
       <Grid container>
         <CheckCircleIcon color="success" />
-        <Grid item>
+        <Grid item width="100%">
           <Typography variant="h5">Subject</Typography>
           <Typography variant="subtitle2">
             Add a subject line for this campaign.
@@ -26,7 +26,7 @@ const HomeLeftComponent: React.FC = () => {
             <HelpOutlineOutlinedIcon fontSize="small" htmlColor="#726cc8" />
           </Grid>
 
-          <Grid>
+          <Grid container flexDirection="column">
             <InputBox
               prefix="A"
               onTextChange={(text: string) => {

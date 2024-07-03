@@ -3,7 +3,7 @@ import { Grid, Typography } from "@mui/material";
 import React from "react";
 
 type EmailBoxProps = {
-  letfText?: string;
+  left?: string;
   title: string;
   time: string;
   content: string;
@@ -11,7 +11,7 @@ type EmailBoxProps = {
 };
 
 const EmailBox: React.FC<EmailBoxProps> = ({
-  letfText,
+  left,
   title,
   time,
   content,
@@ -19,10 +19,9 @@ const EmailBox: React.FC<EmailBoxProps> = ({
 }) => {
   return (
     <>
-      <Grid container>
+      <Grid container display='flex'flexDirection='row' width='100%' marginTop='8px'>
         <Grid
-          item
-          xs={1}
+        marginTop='4px'
           style={{
             backgroundColor: "#4e76ed",
             width: "30px",
@@ -32,18 +31,19 @@ const EmailBox: React.FC<EmailBoxProps> = ({
             color: "white",
             alignItems: "center",
             justifyContent: "center",
-            borderRadius: "40%%",
+            borderRadius: "40px"
+
           }}
         >
-          {letfText ? letfText : <PersonOutlineOutlinedIcon fontSize="small" />}
+          {left ? left : <PersonOutlineOutlinedIcon fontSize="small" />}
         </Grid>
-        <Grid xs={11}>
-          <Grid container style={{ justifyContent: "space-between" }}>
-            <Typography variant="h6">{title}</Typography>
-            <Typography variant="h6">{time}</Typography>
+        <Grid width='80%' marginLeft='16px' >
+          <Grid container display='flex'  flexDirection='row' width='100%' justifyContent='space-between' >
+            <Typography variant="h6" >{title}</Typography>
+            <Typography variant="h6"  >{time}</Typography>
           </Grid>
           <Grid style={{ overflow: "clip", textOverflow: "ellipsis" }}>
-            <Typography variant="h6" height={70} width="100vh">
+            <Typography variant="h6" height={70} width="100%">
               {content}
             </Typography>
           </Grid>
