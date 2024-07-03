@@ -12,7 +12,7 @@ const HomeLeftComponent: React.FC = () => {
     <>
       <Grid container>
         <CheckCircleIcon color="success" />
-        <Grid item width="100%">
+        <Grid item width="80%" marginLeft="20px">
           <Typography variant="h5">Subject</Typography>
           <Typography variant="subtitle2">
             Add a subject line for this campaign.
@@ -39,6 +39,15 @@ const HomeLeftComponent: React.FC = () => {
                 dispatch(setB(text));
               }}
             />
+            <Grid display="flex" flexDirection="row">
+              <Typography variant="body2">
+                <b>Preview text</b>
+              </Typography>
+              <Grid marginLeft="4px">
+                <HelpOutlineOutlinedIcon fontSize="small" htmlColor="#726cc8" />
+              </Grid>
+            </Grid>
+
             <InputBox
               onTextChange={function (text: string): void {
                 //DO NOTHING

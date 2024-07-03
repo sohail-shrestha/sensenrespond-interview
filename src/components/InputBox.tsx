@@ -24,6 +24,8 @@ const InputBox: React.FC<InputBoxProps> = ({ onTextChange, prefix }) => {
       <div>
         <OutlinedInput
           fullWidth
+          multiline
+          maxRows="2"
           value={text}
           onChange={onChange}
           size="small"
